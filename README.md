@@ -1,1 +1,1 @@
-Landing pago for chicken
+Landing page for chicken
