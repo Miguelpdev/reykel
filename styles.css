@@ -60,6 +60,10 @@ html {
   flex-direction: column;
 }
 
+.content-customer-support span {
+  font-size: small;
+}
+
 .container-logo {
   display: flex;
   align-items: center;
@@ -76,6 +80,10 @@ html {
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: -1px;
+}
+
+.container-logo img {
+  height: 40px;
 }
 
 .container-user {
@@ -155,6 +163,39 @@ html {
 
 .menu a:hover {
   color: #fff;
+}
+
+/* Estilos para el icono de hamburguesa */
+#menu-toggle {
+  display: none; /* Oculta el icono de hamburguesa por defecto */
+}
+
+/* Estilos para el menú en pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+  #menu {
+    display: none; /* Oculta la lista de menú por defecto en pantallas pequeñas */
+  }
+
+  #menu-toggle {
+    display: block; /* Muestra el icono de hamburguesa en pantallas pequeñas */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el icono de hamburguesa */
+  }
+
+  .menu {
+    flex-direction: column; /* Cambia la dirección de la lista de menú a vertical en pantallas pequeñas */
+    position: absolute;
+    top: 4rem; /* Ajusta la posición vertical del menú desplegable */
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Cambia el color de fondo del menú desplegable */
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra al menú desplegable */
+    z-index: 999; /* Asegura que el menú desplegable esté en la capa superior */
+  }
+
+  .menu li {
+    margin-bottom: 1rem; /* Añade espacio entre elementos de menú en pantallas pequeñas */
+  }
 }
 
 .search-form {
@@ -1074,4 +1115,9 @@ html {
   .content p {
     font-size: 1.6rem;
   }
+}
+
+.card-category span a {
+  color: white; /* Color blanco */
+  text-decoration: none; /* Sin subrayado */
 }

@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reykel Chicken</title>
+    <title>Reykel Chicken - Menú</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
+      <!-- Aquí puedes incluir el encabezado si lo necesitas -->
       <div class="container-hero">
         <div class="container hero">
           <div class="customer-support">
@@ -43,7 +44,6 @@
             <li><a href="pollos.html">Pollos</a></li>
             <li><a href="chifa.html">Chifa</a></li>
             <li><a href="sopas.html">Sopas</a></li>
-            <li><a href="#especiales">Especiales</a></li>
           </ul>
 
           <form class="search-form">
@@ -56,72 +56,9 @@
       </div>
     </header>
 
-    <section class="banner"></section>
-
     <main class="main-content">
-      <section class="container container-features">
-        <div class="card-feature">
-          <i class="fa-solid fa-plane-up"></i>
-          <div class="feature-content">
-            <span>Envío gratuito a toda Huamanga</span>
-            <p>En pedido superior a S/ 150</p>
-          </div>
-        </div>
-        <div class="card-feature">
-          <i class="fa-solid fa-wallet"></i>
-          <div class="feature-content">
-            <span>Contrareembolso</span>
-            <p>100% garantía de devolución de dinero</p>
-          </div>
-        </div>
-        <div class="card-feature">
-          <i class="fa-solid fa-gift"></i>
-          <div class="feature-content">
-            <span>Tarjeta regalo especial</span>
-            <p>Ofrece bonos especiales con regalo</p>
-          </div>
-        </div>
-        <div class="card-feature">
-          <i class="fa-solid fa-headset"></i>
-          <div class="feature-content">
-            <span>Servicio al cliente 24/7</span>
-            <p>LLámenos 24/7 al 928595558</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="container top-categories">
-        <h1 class="heading-1">Mejores Categorías</h1>
-        <div class="container-categories">
-          <div class="card-category category-moca">
-            <p>Pollos</p>
-            <span><a href="pollos.html">Ver más</a></span>
-          </div>
-          <div class="card-category category-expreso">
-            <p>Chifas</p>
-            <span><a href="chifa.html">Ver más</a></span>
-          </div>
-          <div class="card-category category-capuchino">
-            <p>Sopas</p>
-            <span><a href="sopas.html">Ver más</a></span>
-          </div>
-        </div>
-      </section>
-
-      <section class="container top-products">
-        <h1 class="heading-1">Mejores Productos</h1>
-
-        <div class="container-options">
-          <span class="option active" data-filter="destacados">Destacados</span>
-          <span class="option" data-filter="recientes">Más recientes</span>
-          <span class="option" data-filter="vendidos">Mejores Vendidos</span>
-        </div>
-
-        <div class="container-products"></div>
-      </section>
-
-      <section id="especiales" class="container specials">
-        <h1 class="heading-1">Especiales</h1>
+      <section class="container chicken">
+        <h1 class="heading-1">Chifa</h1>
 
         <div class="container-products">
           <!-- Producto 1 -->
@@ -217,7 +154,7 @@
               <span class="add-cart">
                 <i class="fa-solid fa-basket-shopping"></i>
               </span>
-              <p class="price">S/ 19 <span>S/ 20</span></p>
+              <p class="price">$3.85 <span>$5.50</span></p>
             </div>
           </div>
           <!--  -->
@@ -248,14 +185,16 @@
               <span class="add-cart">
                 <i class="fa-solid fa-basket-shopping"></i>
               </span>
-              <p class="price">S/ 15</p>
+              <p class="price">$5.60</p>
             </div>
           </div>
         </div>
       </section>
+      <section>.</section>
     </main>
 
     <footer class="footer">
+      <!-- Aquí puedes incluir el pie de página si lo necesitas -->
       <div class="container container-footer">
         <div class="menu-footer">
           <div class="contact-info">
@@ -316,175 +255,11 @@
         </div>
       </div>
     </footer>
-
     <script
       src="https://kit.fontawesome.com/81581fb069.js"
       crossorigin="anonymous"
     ></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Obtener referencia a las opciones y productos
-        var options = document.querySelectorAll(".container-options .option");
-        var productsContainer = document.querySelector(".container-products");
-
-        // Datos de productos estáticos
-        var productosDestacados = [
-          {
-            nombre: "Pollo entero",
-            precio: "S/ 60",
-            descuento: "S/ 67",
-            imagen: "img/chicken_whole.png",
-          },
-          {
-            nombre: "Lomo saltado",
-            precio: "S/ 16",
-            descuento: "S/ 18",
-            imagen: "img/lomo_saltado.png",
-          },
-          {
-            nombre: "Bisteck a lo pobre",
-            precio: "S/ 20",
-            descuento: "S/ 27",
-            imagen: "img/bhisteck_poor.webp",
-          },
-          {
-            nombre: "Chaufa de pollo",
-            precio: "S/ 10",
-            descuento: "S/ 16",
-            imagen: "img/chaufa_pollo.png",
-          },
-          // Agrega más productos si es necesario
-        ];
-
-        var productosRecientes = [
-          {
-            nombre: "1/4 de pollo",
-            precio: "S/ 17",
-            descuento: "S/ 20",
-            imagen: "img/quarter_chicken.png",
-          },
-          {
-            nombre: "Broaster a lo pobre",
-            precio: "S/ 18",
-            descuento: "S/ 21",
-            imagen: "img/broaster_pobre.png",
-          },
-          {
-            nombre: "Medio pollo",
-            precio: "S/ 33",
-            descuento: "S/ 37",
-            imagen: "img/medium_chicken.png",
-          },
-          {
-            nombre: "Mostrazo",
-            precio: "S/ 19",
-            descuento: "S/ 21",
-            imagen: "img/mostrazo.png",
-          },
-          // Datos de productos recientes
-        ];
-
-        var productosVendidos = [
-          // Datos de productos más vendidos
-          {
-            nombre: "1/8 de pollo",
-            precio: "S/ 11",
-            descuento: "S/ 12",
-            imagen: "img/eight_chicken.png",
-          },
-          {
-            nombre: "Mostrito",
-            precio: "S/ 13",
-            descuento: "S/ 15",
-            imagen: "img/mostrito.png",
-          },
-          {
-            nombre: "Bisteck a lo pobre",
-            precio: "S/ 20",
-            descuento: "S/ 27",
-            imagen: "img/bhisteck_poor.webp",
-          },
-          {
-            nombre: "Chaufa de pollo",
-            precio: "S/ 10",
-            descuento: "S/ 16",
-            imagen: "img/chaufa_pollo.png",
-          },
-        ];
-
-        // Función para mostrar productos
-        function mostrarProductos(productos) {
-          // Limpiar productos anteriores
-          productsContainer.innerHTML = "";
-
-          // Mostrar productos
-          productos.forEach(function (producto) {
-            var productHTML = `
-              <div class="card-product">
-                <div class="container-img">
-                  <img src="${producto.imagen}" alt="${producto.nombre}" />
-                  ${
-                    producto.descuento
-                      ? `<span class="discount">-13%</span>`
-                      : ""
-                  }
-                  <div class="button-group">
-                    <span>
-                      <i class="fa-regular fa-eye"></i>
-                    </span>
-                    <span>
-                      <i class="fa-regular fa-heart"></i>
-                    </span>
-                    <span>
-                      <i class="fa-solid fa-code-compare"></i>
-                    </span>
-                  </div>
-                </div>
-                <div class="content-card-product">
-                  <h3>${producto.nombre}</h3>
-                  <span class="add-cart">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                  </span>
-                  <p class="price">${producto.precio} <span>${
-              producto.descuento ? producto.descuento : ""
-            }</span></p>
-                </div>
-              </div>
-            `;
-            productsContainer.innerHTML += productHTML;
-          });
-        }
-
-        // Asignar un evento de clic a cada opción
-        options.forEach(function (option) {
-          option.addEventListener("click", function () {
-            // Remover la clase 'active' de todas las opciones
-            options.forEach(function (opt) {
-              opt.classList.remove("active");
-            });
-
-            // Agregar la clase 'active' a la opción seleccionada
-            option.classList.add("active");
-
-            // Mostrar productos según la opción seleccionada
-            switch (option.dataset.filter) {
-              case "destacados":
-                mostrarProductos(productosDestacados);
-                break;
-              case "recientes":
-                mostrarProductos(productosRecientes);
-                break;
-              case "vendidos":
-                mostrarProductos(productosVendidos);
-                break;
-            }
-          });
-        });
-
-        // Mostrar productos destacados por defecto al cargar la página
-        mostrarProductos(productosDestacados);
-      });
-
       // Función para alternar la visibilidad del menú desplegable cuando se hace clic en el icono de hamburguesa
       document
         .getElementById("menu-toggle")
@@ -494,5 +269,7 @@
             menu.style.display === "block" ? "none" : "block";
         });
     </script>
+
+    <!-- Puedes incluir scripts JavaScript aquí si es necesario -->
   </body>
 </html>
