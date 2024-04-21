@@ -56,7 +56,15 @@
       </div>
     </header>
 
-    <section class="banner"></section>
+    <section class="banner">
+      <div class="carousel">
+        <img src="img/banner1.png" alt="Banner 1" />
+        <img src="img/banner2.jpg" alt="Banner 2" />
+        <img src="img/banner3.png" alt="Banner 3" />
+      </div>
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </section>
 
     <main class="main-content">
       <section class="container container-features">
@@ -499,6 +507,35 @@
           menu.style.display =
             menu.style.display === "block" ? "none" : "block";
         });
+
+      let slideIndex = 0;
+
+      function showSlides() {
+        const slides = document.querySelectorAll(".carousel img");
+        if (slideIndex >= slides.length) {
+          slideIndex = 0;
+        }
+        if (slideIndex < 0) {
+          slideIndex = slides.length - 1;
+        }
+        const offset = slideIndex * -100;
+        document.querySelector(
+          ".carousel"
+        ).style.transform = `translateX(${offset}%)`;
+      }
+
+      function plusSlides(n) {
+        slideIndex += n;
+        showSlides();
+      }
+
+      showSlides();
+
+      // Cambiar automáticamente cada 10 segundos
+      setInterval(() => {
+        slideIndex++;
+        showSlides();
+      }, 10000);
     </script>
   </body>
 </html>
