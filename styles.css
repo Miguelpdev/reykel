@@ -984,6 +984,10 @@ html {
     display: none;
   }
 
+  .banner {
+    height: 30rem;
+  }
+
   .content-banner {
     max-width: 50rem;
     margin: 0 auto;
