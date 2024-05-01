@@ -1168,3 +1168,11 @@ html {
   color: white; /* Color blanco */
   text-decoration: none; /* Sin subrayado */
 }
+
+@media (max-width: 390px) {
+  /* Estilos para dispositivos con un ancho máximo de 390px */
+  /* Aquí puedes agregar los estilos que necesites */
+  .banner {
+    height: 30rem;
+  }
+}
