@@ -11,54 +11,36 @@
     <header>
       <div class="container-hero">
         <div class="container hero">
-          <div class="customer-support">
-            <i class="fa-solid fa-headset"></i>
-            <div class="content-customer-support">
-              <span class="text"> <strong>Pedidos</strong> </span>
-              <span class="number"> <strong>928595558</strong> </span>
-            </div>
-          </div>
-
           <div class="container-logo">
             <img src="img/icono.png" alt="Logo de la empresa" />
             <h1 class="logo"><a href="/">Polleria REYKEL</a></h1>
           </div>
 
           <div class="container-user">
-            <i class="fa-solid fa-user"></i>
-            <i class="fa-solid fa-basket-shopping"></i>
-            <div class="content-shopping-cart">
-              <span class="text">Carrito</span>
-              <span class="number">(0)</span>
+            <nav class="navbar container">
+              <i class="fa-solid fa-bars" id="menu-toggle"></i>
+              <ul class="menu" id="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pollos.html">Pollos</a></li>
+                <li><a href="chifa.html">Chifa</a></li>
+                <li><a href="sopas.html">Sopas</a></li>
+                <li><a href="#especiales">Especiales</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="customer-support">
+            <img src="img/call.png" alt="call" />
+            <div class="content-customer-support">
+              <span class="number"> <strong>928595558</strong> </span>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="container-navbar">
-        <nav class="navbar container">
-          <i class="fa-solid fa-bars" id="menu-toggle"></i>
-          <ul class="menu" id="menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pollos.html">Pollos</a></li>
-            <li><a href="chifa.html">Chifa</a></li>
-            <li><a href="sopas.html">Sopas</a></li>
-            <li><a href="#especiales">Especiales</a></li>
-          </ul>
-
-          <form class="search-form">
-            <input type="search" placeholder="Buscar..." />
-            <button class="btn-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-        </nav>
       </div>
     </header>
 
     <section class="banner">
       <div class="carousel">
-        <img src="img/banner1.png" alt="Banner 1" />
         <img src="img/banner2.jpg" alt="Banner 2" />
         <img src="img/banner3.png" alt="Banner 3" />
         <img src="img/banner_4.jpg" alt="Banner 4" />
@@ -101,7 +83,12 @@
       </section>
 
       <section class="container top-categories">
-        <h1 class="heading-1">Mejores Categorías</h1>
+        <div class="arrows">
+          <img src="img/prev-arrow.png" alt="prev arrow" />
+          <h1 class="heading-1">Mejores Categorías</h1>
+          <img src="img/next-arrow.png" alt="next arrow" />
+        </div>
+
         <div class="container-categories">
           <div class="card-category category-moca">
             <p>Pollos</p>
@@ -119,7 +106,11 @@
       </section>
 
       <section class="container top-products">
-        <h1 class="heading-1">Mejores Productos</h1>
+        <div class="arrows">
+          <img src="img/prev-arrow.png" alt="prev arrow" />
+          <h1 class="heading-1">Mejores Productos</h1>
+          <img src="img/next-arrow.png" alt="next arrow" />
+        </div>
 
         <div class="container-options">
           <span class="option active" data-filter="destacados">Destacados</span>
@@ -131,7 +122,11 @@
       </section>
 
       <section id="especiales" class="container specials">
-        <h1 class="heading-1">Especiales</h1>
+        <div class="arrows">
+          <img src="img/prev-arrow.png" alt="prev arrow" />
+          <h1 class="heading-1">Especiales</h1>
+          <img src="img/next-arrow.png" alt="next arrow" />
+        </div>
 
         <div class="container-products">
           <!-- Producto 1 -->
@@ -347,6 +342,10 @@
         </div>
       </div>
     </footer>
+
+    <a href="https://wa.me/+51928595558" target="_blank" class="whatsapp-icon">
+      <img src="img/whatsapp.png" alt="WhatsApp" width="50" height="50" />
+    </a>
 
     <script
       src="https://kit.fontawesome.com/81581fb069.js"
